@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <title>Auth</title>
   </head>
   <body>
     <noscript>
@@ -13,5 +13,22 @@
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.2/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.1.2/firebase-analytics.js";
+      const firebaseConfig = {
+        apiKey: "AIzaSyDfrGqEm1K9Q_X4cYCJ9tmKaf3gL7HC3GU",
+        authDomain: "project-a4c4b.firebaseapp.com",
+        projectId: "project-a4c4b",
+        storageBucket: "project-a4c4b.appspot.com",
+        messagingSenderId: "650181891398",
+        appId: "1:650181891398:web:cc6c6ecbca903763290147",
+        measurementId: "G-SF265VDR4C"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
   </body>
 </html>
